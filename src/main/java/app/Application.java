@@ -30,6 +30,7 @@ public class Application implements Consumer<Event> {
         switch (Platform.CURRENT) {
             case WINDOWS -> window.setIcon(new File("src/main/resources/windows.ico"));
             case MACOS -> window.setIcon(new File("src/main/resources/macos.icns"));
+
         }
         // делаем окно видимым
         window.setVisible(true);
