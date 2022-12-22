@@ -45,16 +45,12 @@ public class Application implements Consumer<Event> {
     public Application() {
         // создаём окно
         window = App.makeWindow();
+
+        // создаём первый заголовок
+        label = new Label(window, true, PANEL_BACKGROUND_COLOR, PANEL_PADDING,
+                "Привет, мир!", true, true);
         // задаём обработчиком событий текущий объект
         window.setEventListener(this);
-        // задаём заголовок
-        window.setTitle("Java 2D");
-        // задаём размер окна
-        window.setWindowSize(900, 900);
-        // задаём его положение
-        window.setWindowPosition(100, 100);
-        // задаём иконку
-        label = new Label(window, false, PANEL_BACKGROUND_COLOR, PANEL_PADDING, "Привет, мир!");
 
         switch (Platform.CURRENT) {
             case WINDOWS -> window.setIcon(new File("src/main/resources/windows.ico"));
