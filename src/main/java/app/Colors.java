@@ -41,4 +41,9 @@ public class Colors {
     private Colors() {
         throw new AssertionError("Вызов этого конструктора запрещён");
     }
+
+    /**
+     * Цвет кнопки
+     */
+    public static final int BUTTON_COLOR = Misc.getColor(80, 0, 0, 0);
 }
