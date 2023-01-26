@@ -1,5 +1,6 @@
 package misc;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.github.humbleui.skija.RRect;
 import io.github.humbleui.skija.Rect;
 
@@ -52,6 +53,7 @@ public class CoordinateSystem2i {
      *
      * @return случайные координаты внутри СК
      */
+    @JsonIgnore
     public Vector2i getRandomCoords() {
         return Vector2i.rand(min, max);
     }
@@ -129,6 +131,7 @@ public class CoordinateSystem2i {
      *
      * @return размер СК
      */
+    @JsonIgnore
     public Vector2i getSize() {
         return size;
     }
@@ -223,4 +226,6 @@ public class CoordinateSystem2i {
                 (y - coordinateSystem.min.y) * (size.y - 1) / (coordinateSystem.size.y - 1) + min.y
         );
     }
+
+
 }
